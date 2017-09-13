@@ -96,19 +96,15 @@
 
   function takepicture() {
     var context = canvas.getContext('2d');
-    console.log(context);
     if (width && height) {
       canvas.width = width;
       canvas.height = height;
       context.drawImage(video, 0, 0, width, height);
 
       var data = canvas.toDataURL('image/png');
-      var picture = new Picture(data);
-      photo.setAttribute('src', picture.imageData);
-      console.log(1234);
+      photo.setAttribute('src', data);
     } else {
       clearphoto();
-      console.log("asdf");
     }
   }
 
