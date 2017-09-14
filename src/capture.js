@@ -82,8 +82,8 @@
       context.drawImage(video, 0, 0, width, height);
       var data = canvas.toDataURL('image/png');
       var picture = new Picture(data)
-      var results = APIRequest(data);
-      //  results not being saved here = need to find out why!
+      var blob = makeBlob(picture.imageData)
+      APIRequest(blob, picture);
       photo.setAttribute('src', picture.imageData);
     } else {
       clearphoto();

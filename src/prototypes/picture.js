@@ -2,6 +2,7 @@
 
   function Picture(data) {
     this.imageData = data;
+    this.apiData = null;
   }
 
  exports.Picture = Picture;

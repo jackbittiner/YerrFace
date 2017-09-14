@@ -1,8 +1,7 @@
 (function(exports) {
 
 
-  function APIRequest(imageURL) {
-    console.log(imageURL);
+  function APIRequest(blob, picture) {
     $.ajax({
         url: "https://westus.api.cognitive.microsoft.com/emotion/v1.0/recognize?",
         beforeSend: function(xhrObj){
@@ -12,9 +11,9 @@
         type: 'POST',
         processData: false,
         contentType: 'application/octet-stream',
-        data: makeBlob(imageURL),
+        data: blob,
      })
-    .done(function(data) {console.log(data)})
+    .done(function(data) {picture.apiData = data})
     // this data is the info we need!!!
     .fail(function() {alert("error");});
   }
