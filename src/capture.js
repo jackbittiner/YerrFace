@@ -88,6 +88,8 @@
     } else {
       clearphoto();
     }
+    console.log(picture)
+    setTimeout(function(){ $('#happy').text(picture.happiness) }, 1000);
   }
 
   window.addEventListener('load', startup, false);
