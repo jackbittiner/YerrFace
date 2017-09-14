@@ -89,7 +89,12 @@
       clearphoto();
     }
     console.log(picture)
-    setTimeout(function(){ $('#happy').text(picture.happiness) }, 1000);
+    setTimeout(function(){
+      $('#happy').text("Happiness scores: " + picture.happiness);
+      $('#sad').text("Sadness score: " + picture.sadness);
+      $('#disgusted').text("Disgust score: " + picture.disgust);
+      $('#surprised').text("Surprise score: " + picture.surprise);
+    }, 1000);
   }
 
   window.addEventListener('load', startup, false);
