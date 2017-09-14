@@ -21,6 +21,7 @@
       picture.contempt = data[0].scores.contempt;
       picture.fear = data[0].scores.fear;
       picture.neutral = data[0].scores.neutral;
+      picture.anger = data[0].scores.anger;
     })
     // this data is the info we need!!!
     .fail(function() {alert("error");});
