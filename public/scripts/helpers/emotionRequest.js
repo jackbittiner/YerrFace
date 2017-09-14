@@ -14,14 +14,7 @@
         data: blob,
      })
     .done(function(data) {
-      picture.happiness = data[0].scores.happiness;
-      picture.sadness = data[0].scores.sadness;
-      picture.surprise = data[0].scores.surprise;
-      picture.disgust = data[0].scores.disgust;
-      picture.contempt = data[0].scores.contempt;
-      picture.fear = data[0].scores.fear;
-      picture.neutral = data[0].scores.neutral;
-      picture.anger = data[0].scores.anger;
+      setResults(picture, data);
     })
     // this data is the info we need!!!
     .fail(function() {alert("error");});
@@ -48,6 +41,17 @@
               }
 
               return new Blob([uInt8Array], { type: contentType });
+          }
+
+          function setResults(picture, data) {
+            picture.happiness = data[0].scores.happiness;
+            picture.sadness = data[0].scores.sadness;
+            picture.surprise = data[0].scores.surprise;
+            picture.disgust = data[0].scores.disgust;
+            picture.contempt = data[0].scores.contempt;
+            picture.fear = data[0].scores.fear;
+            picture.neutral = data[0].scores.neutral;
+            picture.anger = data[0].scores.anger;
           }
 
 

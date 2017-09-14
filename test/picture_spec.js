@@ -12,7 +12,6 @@ describe('picture', function() {
       var pic = new picture.Picture('Pretend Data');
       expect(pic.imageData).to.equal('Pretend Data');
     });
-
   });
 
 });
