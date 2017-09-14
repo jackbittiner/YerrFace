@@ -2,7 +2,10 @@
 
   function Picture(data) {
     this.imageData = data;
-    this.apiData = null;
+    this.happiness = null;
+    this.sadness = null;
+    this.surprise = null;
+    this.disgust  = null;
   }
 
  exports.Picture = Picture;

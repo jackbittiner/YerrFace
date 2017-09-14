@@ -13,7 +13,12 @@
         contentType: 'application/octet-stream',
         data: blob,
      })
-    .done(function(data) {picture.apiData = data})
+    .done(function(data) {
+      picture.happiness = data[0].scores.happiness;
+      picture.sadness = data[0].scores.sadness;
+      picture.surprise = data[0].scores.surprise;
+      picture.disgust = data[0].scores.disgust;
+    })
     // this data is the info we need!!!
     .fail(function() {alert("error");});
   }
