@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Yerr Face</title>
+    <% include partials/asset-load.ejs %>
+  </head>
+  <body>
+
+    <div id='page-container'>
+      <% include partials/scripts.ejs %>
+    </div>
+
+		<div class="contentarea">
+			<h1>Yerr Face</h1>
+			<p>Look at your beautiful face.</p>
+		  <div class="camera">
+		    <video id="video">Video stream not available.</video>
+		    <button id="startbutton">Take photo</button>
+		  </div>
+		  <canvas id="canvas">
+		  </canvas>
+		  <div class="output">
+		    <img id="photo" alt="The screen capture will appear in this box.">
+		  </div>
+
+			<div class="results">
+				<p id="happy"></p>
+		    <p id="sad"></p>
+		    <p id="disgusted"></p>
+		    <p id="surprised"></p>
+				<p id="neutral"></p>
+				<p id="contempt"></p>
+				<p id="fear"></p>
+			</div>
+		</div>
+
+  </body>
+</html>
