@@ -18,6 +18,9 @@
       picture.sadness = data[0].scores.sadness;
       picture.surprise = data[0].scores.surprise;
       picture.disgust = data[0].scores.disgust;
+      picture.contempt = data[0].scores.contempt;
+      picture.fear = data[0].scores.fear;
+      picture.neutral = data[0].scores.neutral;
     })
     // this data is the info we need!!!
     .fail(function() {alert("error");});

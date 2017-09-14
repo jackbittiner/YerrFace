@@ -90,10 +90,13 @@
     }
     console.log(picture)
     setTimeout(function(){
-      $('#happy').text("Happiness scores: " + picture.happiness);
+      $('#happy').text("Happiness score: " + picture.happiness);
       $('#sad').text("Sadness score: " + picture.sadness);
       $('#disgusted').text("Disgust score: " + picture.disgust);
       $('#surprised').text("Surprise score: " + picture.surprise);
+      $('#contempt').text("Contempt score: " + picture.contempt);
+      $('#fear').text("Fear score: " + picture.fear);
+      $('#neutral').text("Neutral score: " + picture.neutral);
     }, 1000);
   }
 
