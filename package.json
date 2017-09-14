@@ -1,0 +1,28 @@
+{
+  "name": "yerrface",
+  "version": "1.0.0",
+  "description": "Check Yer Face",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {
+    "chai": "^4.1.2",
+    "mocha": "^3.5.3",
+    "sinon": "^3.2.1"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jackbittiner/YerrFace.git"
+  },
+  "keywords": [
+    "face"
+  ],
+  "author": "JB & RJ",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jackbittiner/YerrFace/issues"
+  },
+  "homepage": "https://github.com/jackbittiner/YerrFace#readme"
+}
