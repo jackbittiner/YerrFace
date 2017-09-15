@@ -1,3 +1,16 @@
+body {
+  margin: 5%;
+  background-color: darkkhaki;
+  text-align: center;
+  color: darkslategrey;
+}
+
+#title {
+  font-family: monospace;
+  font-weight: bolder;
+  font-size: 500%;
+}
+
 #video {
   border: 1px solid black;
   box-shadow: 2px 2px 3px black;
@@ -42,6 +55,6 @@
 
 .contentarea {
   font-size: 16px;
-  font-family: "Lucida Grande", "Arial", sans-serif;
-  width: 760px;
+  font-family: "Lucida Sans Typewriter", "Helvetica", monospace;
+  width: 100%;
 }
