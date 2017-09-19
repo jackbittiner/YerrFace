@@ -1,6 +1,6 @@
 (function(exports) {
 
-  function APIRequest(blob, picture) {
+  function APIRequest(picture) {
     $.ajax({
         url: "https://westus.api.cognitive.microsoft.com/emotion/v1.0/recognize?",
         beforeSend: function(xhrObj) {
@@ -10,10 +10,10 @@
         type: 'POST',
         processData: false,
         contentType: 'application/octet-stream',
-        data: blob,
+        data: picture.blob,
       })
       .done(function(data) {
-        setResults(picture, data);
+        picture.results = data;
       })
       .fail(function() {
         alert("error");
@@ -46,18 +46,6 @@
       type: contentType
     });
   }
-
-  function setResults(picture, data) {
-    picture.happiness = data[0].scores.happiness;
-    picture.sadness = data[0].scores.sadness;
-    picture.surprise = data[0].scores.surprise;
-    picture.disgust = data[0].scores.disgust;
-    picture.contempt = data[0].scores.contempt;
-    picture.fear = data[0].scores.fear;
-    picture.neutral = data[0].scores.neutral;
-    picture.anger = data[0].scores.anger;
-  }
-
 
   exports.APIRequest = APIRequest;
   exports.makeBlob = makeBlob;

@@ -81,14 +81,16 @@
       canvas.height = height;
       context.drawImage(video, 0, 0, width, height);
       var data = canvas.toDataURL('image/png');
-      var picture = new Picture(data)
-      var blob = makeBlob(picture.imageData)
-      APIRequest(blob, picture);
+      var blob = makeBlob(data);
+      var picture = new Picture(blob);
+      APIRequest(picture);
       photo.setAttribute('src', picture.imageData);
     } else {
       clearphoto();
     }
     console.log(picture)
+    picture.generateFace();
+    console.log(picture.faces);
     setTimeout(function(){
       setEmotionResults(picture);
     }, 1000);

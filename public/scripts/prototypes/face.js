@@ -1,17 +1,16 @@
 (function(exports) {
 
-  function Picture(data) {
-    this.imageData = data;
-    this.happiness = null;
-    this.sadness = null;
-    this.surprise = null;
-    this.disgust = null;
-    this.contempt = null;
-    this.fear = null;
-    this.neutral = null;
-    this.anger = null;
+  function Face(data) {
+    this.setFaceEmotions(data.scores);
+    console.log(this);
   }
 
- exports.Picture = Picture;
+  Face.prototype.setFaceEmotions = function(scores) {
+    for(var key in scores) {
+      this.key = scores[key];
+    }
+  }
+
+ exports.Face = Face;
 
 })(this);
