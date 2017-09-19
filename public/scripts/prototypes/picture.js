@@ -6,12 +6,11 @@
     this.faces = [];
   }
 
-  Picture.prototype.generateFace = function(json) {
-    for(var key in json) {
-      if (key === ) {
-
-      }
-    }
+  Picture.prototype.generateFaces = function() {
+    var something = this.faces
+    this.results.forEach(function(result) {
+      something.push(new Face(result))
+    })
   }
 
   exports.Picture = Picture;

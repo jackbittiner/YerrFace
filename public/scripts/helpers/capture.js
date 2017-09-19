@@ -84,15 +84,13 @@
       var blob = makeBlob(data);
       var picture = new Picture(blob);
       APIRequest(picture);
-      photo.setAttribute('src', picture.imageData);
+      photo.setAttribute('src', data);
     } else {
       clearphoto();
     }
-    console.log(picture)
-    picture.generateFace();
-    console.log(picture.faces);
     setTimeout(function(){
-      setEmotionResults(picture);
+      picture.generateFaces();
+      setEmotionResults(picture.faces[0]);
     }, 1000);
   }
 
