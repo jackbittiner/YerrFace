@@ -90,9 +90,22 @@
     }
     setTimeout(function(){
       picture.generateFaces();
+      divAppend(picture.faces[0]);
       setEmotionResults(picture.faces[0]);
     }, 1000);
   }
+
+  function divAppend(face) {
+    var results = document.getElementsByClassName('results')[0];
+    var divResult = document.createElement('div')
+    divResult.setAttribute("id", "Result1");
+    var happiness = document.createElement("p");
+    happiness.setAttribute("id", "Happiness1");
+    divResult.appendChild(happiness);
+    results.appendChild(divResult);
+  }
+
+
 
   window.addEventListener('load', startup, false);
 })();
